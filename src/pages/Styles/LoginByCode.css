@@ -18,6 +18,11 @@
     background-position: top center;
     background-size: 130vw auto;
     overflow: hidden;
+    transition: background-position 0.5s ease-in-out, background-size 0.5s ease-in-out;
+}
+.login-byCode.desktop {
+    background-position: center;
+    background-size: 100% auto;
 }
 
 @media (max-width: 425px) {
@@ -47,17 +52,22 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    max-width: 23.75rem;
     height: 100vh;
     transition: height 0.3s ease, width 0.3s ease;
 }
 
-.container--mobile {
+.container--mobile1 {
     justify-content: space-between;
     width: 100vw;
     max-width: none;
+    background: linear-gradient(
+            rgba(22, 22, 22, 0),
+            rgba(22, 22, 22, 0),
+            rgba(22, 22, 22, 1),
+            rgba(22, 22, 22, 1),
+            rgba(22, 22, 22, 1));
 }
-.container--desktop {
+.container--desktop1 {
     justify-content: center;
     max-width: 23.75rem;
 }
@@ -116,11 +126,37 @@
     margin-bottom: 0.9375rem;
     background-color: rgba(13, 13, 13, 0);
     width: 100vw;
+    animation: container-down;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
 }
 .container-bottom--desktop {
     transform: translateY(0);
     background-color: #161616;
     max-width: 23.75rem;
+    animation: container-up;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+}
+
+@keyframes container-up {
+    from {
+        transform: translateY(10rem);
+
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes container-down {
+    from {
+        transform: translateY(-10rem);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .container-bottom h2{
@@ -160,11 +196,11 @@
     align-items: center;
     width: 100%;
     max-width: 20rem;
+    margin-bottom: 1.875rem;
 }
 .lang {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.875rem;
 }
 .lang--en{
     margin-left: 5px;

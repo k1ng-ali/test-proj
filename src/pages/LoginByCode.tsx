@@ -13,9 +13,9 @@ export default function LoginByCode() {
     const isMobile = useMediaQuery('(max-width: 64rem)')
 
     return (
-        <div className={"login-byCode"}>
+        <div className={`login-byCode ${!isMobile ? 'desktop' : ''}`}>
             <img src={logo} className={`logo ${isMobile ? "logo--mobile" : "logo--desktop"}`}/>
-                <div className={`container ${isMobile ? "container--mobile" : "container--desktop"}`}>
+                <div className={`container ${isMobile ? "container--mobile1" : "container--desktop1"}`}>
                     <div className={`container-top ${isMobile ? "container-top--mobile" : "container-top--desktop"}`}>
                     <p className={`error-message ${valideValue ? "error-message--hidden" : ""}`}>
                         Некорректный код заказа. Проверьте ещё раз.

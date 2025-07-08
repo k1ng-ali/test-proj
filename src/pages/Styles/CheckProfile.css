@@ -6,7 +6,7 @@
     height: 100vh;
     color: white;
     z-index: 0;
-    transition: all 0.5s ease-in-out;
+    /*transition: width 0.1s ease-in-out;*/
 }
 .CheckProfile--mobile {
     flex-direction: column;
@@ -76,31 +76,30 @@
     padding: 1.875rem;
     z-index: 10;
     margin: 0 3.5625rem;
-    transition: all 0.5s ease-in-out;
+    animation: scale 0.3s ease-in-out;
 }
 .banner {
+    width: 100%;
+    max-width: 65.3125rem;
     border-radius: 0.625rem;
     height: auto;
     max-height: 30.5rem;
-    transition: all 0.5s ease-in-out;
+    resize: horizontal;
 }
 .banner--title {
     font-size: 2.5rem;
     font-weight: 500;
     margin-top: 1.25rem;
     margin-bottom: 0;
-    transition: all 0.5s ease-in-out;
 }
 .dlc-container {
     margin-top: 1.4375rem;
     margin-bottom: 0;
-    transition: all 0.5s ease-in-out;
 }
 .banner-desc {
     margin-top: 1.4375rem;
     margin-bottom: 0;
     max-width: 12rem;
-    transition: all 0.5s ease-in-out;
 }
 
 
@@ -109,30 +108,64 @@
     display: flex;
     flex-direction: column;
     z-index: 10;
-    transition: all 0.5s ease-in-out;
 }
 .container--mobile {
+    justify-content: space-between;
+    width: 100vw;
+    max-width: none;
     background: linear-gradient(
             rgba(22, 22, 22, 0),
             rgba(22, 22, 22, 0),
             rgba(22, 22, 22, 1),
             rgba(22, 22, 22, 1),
             rgba(22, 22, 22, 1));
-    justify-content: space-between;
+    animation: to-left 0.3s ease-in-out;
 }
 .container--desktop {
     max-width: 27rem;
     margin-right: 3.5625rem;
+    animation: to-right 0.3s ease-in-out;
+    justify-content: center;
+    width: 100%;
+}
+@keyframes scale {
+    from {
+        opacity: 0;
+        scale: 0.7
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes to-right {
+    from {
+        transform: translateX(-10rem);
+        opacity: 0;
+        scale: 1.3;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes to-left {
+    from {
+        transform: translateX(10rem);
+        opacity: 0;
+        scale: 0.7;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 .title--mobile {
     max-width: 12rem;
     font-size: 0.875rem;
-    transition: all 0.5s ease-in-out;
 }
 .title--desktop {
     font-size: 2.5rem;
     text-align: center;
-    transition: all 0.5s ease-in-out;
 }
 
 .second-container{
@@ -153,7 +186,6 @@
     display: flex;
     flex-direction: row;
     margin-top: 1.125rem;
-    transition: all 0.5s ease-in-out;
 }
 
 .dlc {
@@ -225,10 +257,11 @@
     justify-content: space-between;
     width: 100%;
     max-width: 20rem;
-    transition: all 0.5s ease-in-out;
+    margin-bottom: 0.9375rem ;
+    margin-top: 4rem;
 }
 .lang {
-    margin: 0.9375rem 0;
+    margin: 0;
 }
 .lang--left {
     margin-right: 0.3125rem;

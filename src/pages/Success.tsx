@@ -1,6 +1,6 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ava1 from "../assets/images/background-2.jpg";
-import banner from "../assets/images/game-banner.png";
+import banner from "../assets/images/game-banner2.png";
 import logo from "../assets/images/Logo.svg";
 import gift from "../assets/images/gift.png"
 import close from "../assets/ico/close.svg"
@@ -10,7 +10,7 @@ import "./Styles/Success.css"
 export default function Success() {
     const isMobile = useMediaQuery('(max-width: 64rem)')
     return (
-        <div className={`CheckProfile ${isMobile ? "CheckProfile--mobile" : "CheckProfile--desktop"}`}>
+        <div className={`CheckProfile ${isMobile ? "CheckProfile--mobile green" : "CheckProfile--desktop"}`}>
             <img src={logo} className={`logo ${isMobile ? "logo--mobile" : "logo--desktop"}`}/>
             <img src={close} className={`close-btn ${isMobile ? "" : "hidden"}`}/>
             {!isMobile ? (
@@ -44,7 +44,7 @@ export default function Success() {
                         <img src={gift} className={`gift-img`}/>
                     </div>
                     <Avatar
-                        ClassName={`ava ava--${!isMobile ? "hidden" : ""}`}
+                        ClassName={`ava--success ava--${!isMobile ? "hidden" : ""}`}
                         variant={"success"}
                         loadedImg={true}
                         src={ ava1}
@@ -73,6 +73,7 @@ export default function Success() {
                         > Главная </Button>
                         <button className={`btn-def btn--check-ver`}>Проверить версию издания</button>
                         <button className={"btn-def btn--goto"}>Посмотреть игру</button>
+
                     </div>
                 </div>
                 <div className={`third-container`}>
@@ -91,6 +92,7 @@ export default function Success() {
                         className={"tg--btn"}
                         size={"mobile"}
                     />
+
                 </div>
                 <button className={`btn-def close ${isMobile ? "hidden" : ""}`}>
                     <img src={close} className={`close-ico`}/>

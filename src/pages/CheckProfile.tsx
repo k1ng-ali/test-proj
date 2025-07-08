@@ -1,6 +1,6 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {useEffect, useState} from "react";
-import logo from "../assets/images/Logo-1.svg"
+import logo from "../assets/images/Logo.svg"
 import ava1 from "../assets/images/ava-1.jpg"
 import banner from "../assets/images/game-banner.png"
 import "./Styles/CheckProfile.css"

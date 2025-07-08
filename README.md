@@ -1,3 +1,35 @@
+# Ссылки
+## Вход по коду игра
+[Вход по коду игра (preview)](https://k1ng-ali.github.io/test-proj/)
+
+[файл](src/pages/LoginByCode.tsx)
+
+[стил](src/pages/Styles/LoginByCode.css)
+
+
+## Проверка профилья
+[Проверка профилья (preview)](https://k1ng-ali.github.io/test-proj/#CheckProfile)
+
+[файл](src/pages/CheckProfile.tsx)
+
+[стил](src/pages/Styles/CheckProfile.css)
+
+## Удачная покупка
+[Удачная покупка (preview)](https://k1ng-ali.github.io/test-proj/#Success)
+
+[файл](src/pages/Success.tsx)
+
+[стил](src/pages/Styles/Success.css)
+
+## Макет
+-[Макет](https://www.figma.com/design/0Y3KrdFxBu2XCdLsoE8yhk/%D0%92%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0?node-id=3-2554&t=XhIOnZQUYyML4GcC-0)
+
+
+
+
+|--------------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------|
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
